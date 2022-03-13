@@ -26,8 +26,6 @@ WORKDIR /root/userbot
 #Install python requirements
 RUN /bin/sh -c pip3 install -r https://raw.githubusercontent.com/Randi356/Vegeta-Userbot/Vegeta-Userbot/requirements.txt
 
-RUN pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
-
 EXPOSE 80 443
 
 CMD ["python3", "-m", "userbot"]
